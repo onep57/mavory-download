@@ -267,7 +267,8 @@ a.man:hover{background:rgba(0,208,205,.055)}
   document.getElementById("ready-text").innerHTML = "พร้อมดาวน์โหลด&nbsp; · &nbsp;เวอร์ชัน " + esc(RELEASE.version);
   var mine = os();
   document.getElementById("grid").innerHTML = DOWNLOADS.map(function (d) {
-    var dl = d.url ? '<a class="btn primary" href="' + esc(d.url) + '" target="_blank" rel="noopener">' + DL + 'ดาวน์โหลด ' + esc(d.name) + '</a>' : '<span class="btn primary off">ยังไม่มีลิงก์ดาวน์โหลด</span>';
+    var dl = d.url ? '<a class="btn primary" href="' + esc(d.url) + '" target="_blank" rel="noopener">' + DL + (d.label ? esc(d.label) : 'ดาวน์โหลด ' + esc(d.name)) + '</a>' : '<span class="btn primary off">ยังไม่มีลิงก์ดาวน์โหลด</span>';
+    if (d.alt && d.alt.url) dl += '<a class="btn ghost" href="' + esc(d.alt.url) + '" target="_blank" rel="noopener">' + DL + esc(d.alt.label || 'ดาวน์โหลดอีกแบบ') + '</a>';
     var man = d.manual ? '<a class="btn ghost" href="' + esc(d.manual) + '" target="_blank" rel="noopener">วิธีติดตั้งและใช้งาน</a>' : '<span class="btn ghost off">ยังไม่มีคู่มือ</span>';
     return '<article class="card' + (d.id === mine ? " you" : "") + '"><div class="card-top"><div class="ico">' + ICONS[d.id] + '</div><div><h2>' + esc(d.name) + '</h2><p class="kind">' + esc(d.kind) + '</p></div>' + (d.id === mine ? '<span class="tag">ตรงกับเครื่องนี้</span>' : "") + '</div><p class="desc">' + esc(d.desc) + ' <span class="v">' + esc(d.ver) + '</span></p><div class="actions">' + dl + man + '</div></article>';
   }).join("");
