@@ -79,6 +79,42 @@ a.man:hover{background:rgba(0,208,205,.055)}
 @media(max-width:900px){.page{width:min(760px,calc(100% - 28px))}.hero{overflow:hidden;height:auto;min-height:340px;grid-template-columns:1fr 1fr;gap:12px}.hero-copy{padding:22px 0 0 10px;grid-column:1;grid-row:1}.hero-art{position:absolute;left:28%;right:30%;width:42%;height:310px;top:0;opacity:.78}.storyboard{grid-column:2;grid-row:1;max-width:330px;justify-self:end}.hero-art > img.filmstrip{left:20%;width:90%}.lower{grid-template-columns:1fr;gap:22px}}
 @media(max-width:600px){.page{width:calc(100% - 24px);padding-top:8px}.hero{display:flex;flex-direction:column;gap:12px;padding-bottom:14px;overflow:hidden}.hero-copy{padding:14px 4px 0;max-width:none}.brand{margin-bottom:13px}h1{font-size:31px;max-width:310px}.lead{max-width:370px}.hero-art{position:absolute;top:35px;right:-28px;left:auto;width:66%;height:260px;opacity:.35;z-index:0}.ready{margin-top:12px}.storyboard{width:100%;max-width:none;margin:0 auto 3px;padding:12px}.sb-card{height:auto;aspect-ratio:1.22}.lower{margin-top:0;gap:20px}.grid{gap:8px}.card{padding:10px;min-height:138px}.card h2{font-size:13px}.desc{white-space:normal;min-height:28px}.section-title{font-size:19px}.man{padding:10px}}
 @media(max-width:380px){.grid{grid-template-columns:1fr}.card{min-height:126px}.sb-card{height:auto;aspect-ratio:1.22}}
+
+/* PRODUCT PROGRAM PANELS — added without altering the existing download/tutorial UI */
+.product-showcase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0 26px;align-items:stretch}
+.product-card{--pc-accent:#21d9d5;--pc-accent2:#8a63f6;position:relative;isolation:isolate;overflow:hidden;min-width:0;min-height:480px;padding:26px 25px 22px;border-radius:22px;border:1px solid rgba(54,185,211,.46);background:radial-gradient(ellipse at 0% 0%,rgba(32,202,216,.09),transparent 43%),linear-gradient(145deg,rgba(13,20,41,.98),rgba(5,14,28,.99) 72%);box-shadow:0 14px 36px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.045);display:flex;flex-direction:column;gap:0}
+.product-card:before{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--pc-accent),var(--pc-accent2),#ed72d4);opacity:.95}
+.product-card:after{content:"";position:absolute;z-index:-1;width:240px;height:240px;right:-115px;top:-130px;border-radius:50%;background:radial-gradient(circle,rgba(42,174,222,.14),transparent 70%);pointer-events:none}
+.product-card.flow{--pc-accent:#6596ff;--pc-accent2:#6476dc;border-color:rgba(93,130,229,.48);background:radial-gradient(ellipse at 100% 0%,rgba(86,116,225,.12),transparent 45%),linear-gradient(145deg,rgba(14,21,48,.98),rgba(5,14,29,.99) 75%)}
+.product-topline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:27px;min-height:28px}
+.product-brand{font:700 19px/1.2 var(--font-display);letter-spacing:-.025em;color:#edf5ff}
+.product-brand span{background:linear-gradient(90deg,var(--pc-accent),var(--pc-accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.product-pill{flex:none;border:1px solid color-mix(in srgb,var(--pc-accent) 60%,transparent);border-radius:30px;padding:5px 11px;color:var(--pc-accent);font:500 9px var(--mono);letter-spacing:.015em;white-space:nowrap;background:rgba(5,17,34,.46)}
+.product-card h2{font:600 clamp(21px,2.3vw,27px)/1.32 var(--font-display);letter-spacing:-.025em;color:#ecf3ff;margin:0 0 12px;text-wrap:balance}
+.product-card h2 span{background:linear-gradient(90deg,var(--pc-accent),var(--pc-accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.product-desc{font-size:12px;line-height:1.75;color:#9aabba;margin:0 0 20px;min-height:43px}
+.product-features{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-direction:column;gap:10px;color:#c7d2e0;font-size:12px}
+.product-features li{display:flex;align-items:flex-start;gap:10px;line-height:1.55}
+.product-features li:before{content:"✓";flex:none;color:var(--pc-accent);font:700 17px/1 var(--font-body);text-shadow:0 0 12px color-mix(in srgb,var(--pc-accent) 60%,transparent);margin-top:1px}
+.product-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:auto;margin-bottom:17px}
+.product-price{min-width:0;min-height:100px;border:1px solid color-mix(in srgb,var(--pc-accent) 52%,#24344a);border-radius:14px;padding:12px 11px 10px;background:linear-gradient(145deg,rgba(5,28,37,.78),rgba(8,20,36,.86));display:flex;flex-direction:column;justify-content:center;gap:3px}
+.product-price:nth-child(2){border-color:rgba(91,145,236,.52);background:linear-gradient(145deg,rgba(9,28,51,.88),rgba(9,20,40,.9))}
+.product-price:nth-child(3){border-color:rgba(208,159,72,.58);background:linear-gradient(145deg,rgba(40,31,20,.62),rgba(20,20,29,.9))}
+.product-price label{font-size:10px;color:#91a7b6;line-height:1.35}
+.product-price strong{font:700 clamp(18px,2vw,23px)/1.3 var(--font-display);color:var(--pc-accent);white-space:nowrap}
+.product-price:nth-child(2) strong{color:#8db8ff}.product-price:nth-child(3) strong{color:#ffd36b}
+.product-price small{font-size:9px;color:#9aaaba;line-height:1.3}
+.product-price.single{min-height:136px;grid-template-columns:1fr;align-items:start;padding:18px 17px;margin-top:auto;margin-bottom:17px;border-color:rgba(111,130,238,.65);background:linear-gradient(125deg,rgba(15,27,62,.88),rgba(12,23,48,.94))}
+.product-price.single label{font-size:12px}
+.product-price.single strong{font-size:34px;line-height:1.1;color:#a7c6ff}
+.product-price.single small{font-size:12px;line-height:1.6}
+.product-cta{display:flex;align-items:center;justify-content:center;gap:8px;min-height:53px;padding:12px 16px;border-radius:13px;background:linear-gradient(100deg,#24ddcd 0%,#459ff2 53%,#a16cf2 100%);color:#051626;text-decoration:none;text-align:center;font:700 13px var(--font-display);box-shadow:0 9px 22px rgba(28,174,226,.18);transition:filter .18s,transform .18s,box-shadow .18s}
+.product-cta:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 12px 26px rgba(28,174,226,.25)}
+.product-cta:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.product-note{margin:13px 0 0;color:#7f94a7;font-size:9px;line-height:1.65}
+@media(max-width:760px){.product-showcase{grid-template-columns:1fr;gap:14px;margin:14px 0 22px}.product-card{min-height:0;padding:22px 20px 19px}.product-topline{margin-bottom:20px}.product-desc{min-height:0}}
+@media(max-width:420px){.product-card{padding:19px 15px 16px;border-radius:18px}.product-brand{font-size:16px}.product-pill{font-size:8px;padding:4px 8px}.product-prices{gap:6px}.product-price{padding:9px 7px;min-height:91px}.product-price label{font-size:9px}.product-price strong{font-size:17px}.product-price.single{padding:15px}.product-price.single strong{font-size:31px}}
+
 </style>
 </head>
 <body>
@@ -105,6 +141,54 @@ a.man:hover{background:rgba(0,208,205,.055)}
       <div class="sb-progress"><span></span></div>
     </section>
   </header>
+
+  <section class="product-showcase" aria-label="เลือกโปรแกรม MAVORY">
+    <article class="product-card meta">
+      <div class="product-topline">
+        <div class="product-brand">MAVORY <span>Meta AI &amp; Grok</span></div>
+        <span class="product-pill">AI VIDEO WORKFLOW</span>
+      </div>
+      <h2>วางเรื่องให้พร้อม<br><span>สร้างคลิปด้วย AI</span></h2>
+      <p class="product-desc">สำหรับคนทำ Affiliate ร้านค้าออนไลน์ และครีเอเตอร์ที่ต้องการสร้างคลิปสินค้า รีวิว ป้ายยา หรือเล่าเรื่องเป็นซีรีส์</p>
+      <ul class="product-features">
+        <li>ช่วยคิดพล็อตและจัดโครงบท</li>
+        <li>สร้างตัวละครและออกแบบฉาก</li>
+        <li>สร้าง Storyboard แบ่งเป็นฉาก</li>
+        <li>ส่งต่อการสร้างวิดีโอผ่าน Meta AI และ Grok</li>
+        <li>จัดการโปรเจกต์ใน MAVORY</li>
+      </ul>
+      <div class="product-prices" aria-label="แพ็กเกจ MAVORY Meta AI และ Grok">
+        <div class="product-price"><label>ทดลองฟรี</label><strong>1 วัน</strong></div>
+        <div class="product-price"><label>แพ็กเกจทดลอง</label><strong>99 ฿</strong><small>ใช้งาน 7 วัน</small></div>
+        <div class="product-price"><label>ซื้อขาด</label><strong>649 ฿</strong><small>ตลอดชีพ</small></div>
+      </div>
+      <a class="product-cta" href="https://drive.google.com/drive/folders/1tPrtAco7TOVqLhcMH-c8SWD7al5YQhFB?usp=drive_link" target="_blank" rel="noopener">ทดลอง MAVORY Meta &amp; Grok ↗</a>
+      <p class="product-note">ราคาไม่รวมค่าบริการหรือเครดิตของ Meta AI และ Grok (ถ้ามี) ซึ่งเป็นค่าใช้จ่ายแยกต่างหาก</p>
+    </article>
+
+    <article class="product-card flow">
+      <div class="product-topline">
+        <div class="product-brand">MAVORY <span>Flow</span></div>
+        <span class="product-pill">GOOGLE FLOW</span>
+      </div>
+      <h2>สร้างวิดีโอคุณภาพสูง<br><span>ด้วย Google Flow</span></h2>
+      <p class="product-desc">สำหรับผู้ที่ต้องการสร้างวิดีโอภาพยนตร์ คลิปสินค้า คลิปโฆษณา และคอนเทนต์ภาพเคลื่อนไหว พร้อมจัดการโปรเจกต์ผ่าน MAVORY</p>
+      <ul class="product-features">
+        <li>สร้างวิดีโอผ่าน Google Flow</li>
+        <li>เลือกสไตล์ภาพให้เข้ากับงาน</li>
+        <li>เหมาะกับคลิปสินค้าและโฆษณา</li>
+        <li>จัดระเบียบและจัดการโปรเจกต์</li>
+        <li>เริ่มทดลองผ่านลิงก์ได้ทันที</li>
+      </ul>
+      <div class="product-price single" aria-label="แพ็กเกจ MAVORY Flow">
+        <label>ทดลองใช้งาน</label>
+        <strong>ฟรี</strong>
+        <small>ซื้อขาด MAVORY Flow เพียง 349 บาท · ใช้งานตลอดชีพ</small>
+      </div>
+      <a class="product-cta" href="https://flow.google.com/shared/tool/ec43acf7-e9bd-4c9d-a39a-93b36aff642d" target="_blank" rel="noopener">ทดลอง MAVORY Flow ↗</a>
+      <p class="product-note">ต้องมีแพ็กเกจ Google Flow และเครดิตสำหรับสร้างวิดีโอ ค่าใช้จ่ายดังกล่าวแยกต่างหาก ไม่รวมในราคา MAVORY</p>
+    </article>
+  </section>
 
   <main class="lower">
     <section aria-label="ตัวติดตั้ง">
