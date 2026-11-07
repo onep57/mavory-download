@@ -137,6 +137,19 @@ a.man:hover{background:rgba(0,208,205,.055)}
 .vchip{display:inline-block;margin:0 2px;padding:1px 8px;border-radius:14px;background:rgba(5,22,38,.55);font:600 10px var(--mono);letter-spacing:.02em}
 .product-cta:not(.ghost) .vchip{color:#051626;background:rgba(255,255,255,.38)}
 .product-cta.ghost .vchip{color:#9ec0ff;border:1px solid rgba(101,150,255,.45)}
+.flow-box{border:1px solid rgba(93,130,229,.5);border-radius:16px;padding:15px 16px 14px;background:linear-gradient(125deg,rgba(15,27,62,.88),rgba(12,23,48,.94));margin-bottom:12px}
+.flow-box.trial{margin-top:auto;border-color:rgba(33,217,213,.55);background:linear-gradient(125deg,rgba(6,34,44,.85),rgba(10,24,44,.94))}
+.fb-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.fb-tag{font:600 12px var(--font-display);color:#cfe0ff}
+.flow-box.trial .fb-tag{color:#8ef3ee}
+.fb-ver{font:600 10px var(--mono);padding:2px 9px;border-radius:14px;border:1px solid rgba(101,150,255,.5);color:#9ec0ff}
+.flow-box.trial .fb-ver{border-color:rgba(33,217,213,.55);color:#7eeee8}
+.fb-price{font:700 32px/1.15 var(--font-display);color:#a7c6ff}
+.fb-price.free{color:#2fe8de}
+.fb-price small{font:400 11px var(--font-body);color:#9db3c8;margin-left:4px}
+.fb-desc{margin:5px 0 12px;font-size:11px;line-height:1.6;color:#9db3c8}
+.fb-cta{min-height:46px}
+.fb-guide{margin-top:9px}
 </style>
 </head>
 <body>
@@ -209,15 +222,20 @@ a.man:hover{background:rgba(0,208,205,.055)}
         <li>จัดระเบียบและจัดการโปรเจกต์</li>
         <li>เริ่มทดลองผ่านลิงก์ได้ทันที</li>
       </ul>
-      <div class="product-price single" aria-label="แพ็กเกจ MAVORY Flow">
-        <label>ทดลองใช้งาน</label>
-        <strong>ฟรี</strong>
-        <small>ซื้อขาด MAVORY Flow เพียง 349 บาท · ใช้งานตลอดชีพ</small>
+      <div class="flow-box trial" aria-label="MAVORY Flow ทดลองฟรี">
+        <div class="fb-head"><span class="fb-tag">ทดลองใช้</span><span class="fb-ver" id="flow-trial-v">รุ่น t2.5</span></div>
+        <div class="fb-price free">ฟรี</div>
+        <p class="fb-desc">ไม่ต้องใช้รหัส · โหมดละครสั้นและคลิปขายสินค้า · สร้างได้สูงสุด 2 ช็อตต่อเรื่อง</p>
+        <a class="product-cta ghost fb-cta" id="flow-trial" href="https://flow.google.com/shared/tool/d64abf4a-d446-4306-96da-7f6b8729bba5" target="_blank" rel="noopener">กดทดลองใช้ฟรี ↗</a>
       </div>
-      <a class="product-cta" id="flow-full" href="https://flow.google.com/shared/tool/3c285f38-8893-4db2-a8dd-cb38a240cf1f" target="_blank" rel="noopener">เปิดใช้งาน MAVORY Flow ตัวเต็ม <span class="vchip" id="flow-full-v">v1.44</span> ↗</a>
-      <a class="product-cta ghost" id="flow-trial" href="https://flow.google.com/shared/tool/d64abf4a-d446-4306-96da-7f6b8729bba5" target="_blank" rel="noopener">ทดลองใช้ฟรี (จำกัด 2 ช็อต) <span class="vchip" id="flow-trial-v">รุ่น t2.5</span> ↗</a>
-      <a class="product-cta ghost" href="https://www.youtube.com/watch?v=2WslDLDL6Cw" target="_blank" rel="noopener">▶ คู่มือ MAVORY Flow (วิดีโอสอนใช้งาน)</a>
-      <p class="product-note">ตัวเต็มต้องใช้รหัสปลดล็อกที่ได้รับหลังซื้อ · ต้องมีแพ็กเกจ Google Flow และเครดิตสำหรับสร้างวิดีโอ ค่าใช้จ่ายดังกล่าวแยกต่างหาก ไม่รวมในราคา MAVORY</p>
+      <div class="flow-box full" aria-label="MAVORY Flow ตัวเต็ม">
+        <div class="fb-head"><span class="fb-tag">ตัวเต็ม</span><span class="fb-ver" id="flow-full-v">v1.44</span></div>
+        <div class="fb-price">349 ฿ <small>ซื้อขาด · ใช้งานตลอดชีพ</small></div>
+        <p class="fb-desc">ใช้ได้ครบทั้ง 5 รูปแบบ ไม่จำกัดแค่ 2 ช็อต · ต้องใช้รหัสปลดล็อกที่ได้รับหลังซื้อ</p>
+        <a class="product-cta fb-cta" id="flow-full" href="https://flow.google.com/shared/tool/3c285f38-8893-4db2-a8dd-cb38a240cf1f" target="_blank" rel="noopener">เปิดใช้งาน MAVORY Flow ตัวเต็ม ↗</a>
+        <a class="product-cta ghost fb-guide" href="https://www.youtube.com/watch?v=2WslDLDL6Cw" target="_blank" rel="noopener">▶ คู่มือ MAVORY Flow (วิดีโอสอนใช้งาน)</a>
+      </div>
+      <p class="product-note">ต้องมีแพ็กเกจ Google Flow และเครดิตสำหรับสร้างวิดีโอ ค่าใช้จ่ายดังกล่าวแยกต่างหาก ไม่รวมในราคา MAVORY</p>
     </article>
   </section>
   <main class="lower">
