@@ -18,6 +18,10 @@ window.MAVORY_RELEASE = {
     { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v6.6.7",
       url: "https://drive.google.com/file/d/1-wXxvL5u7tFdq7UEvg6M7xJCulHFsQBu/view", manual: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" }
   ],
+  flow: {
+    full:  { version: "v1.44", url: "https://flow.google.com/shared/tool/3c285f38-8893-4db2-a8dd-cb38a240cf1f" },
+    trial: { version: "รุ่น t2.5", url: "https://flow.google.com/shared/tool/d64abf4a-d446-4306-96da-7f6b8729bba5" }
+  },
   manuals: [
     { title: "ติดตั้งส่วนขยาย MAVORY บน Chrome (Windows)", note: "วิดีโอสอนติดตั้งและเริ่มใช้งานส่วนขยายบนคอมพิวเตอร์", url: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" },
     { title: "ติดตั้ง MAVORY บน Android", note: "วิดีโอสอนติดตั้งแอปบนมือถือ", url: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
