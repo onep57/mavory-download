@@ -4,20 +4,20 @@
    label   : ข้อความบนปุ่มหลัก (เว้นได้)   alt : ปุ่มดาวน์โหลดที่สอง { url, label } (เว้นได้)
    manual  : ลิงก์วิดีโอสอนของอุปกรณ์นั้น (ว่างไว้ = ปุ่มขึ้นว่า "ยังไม่มีคู่มือ")            */
 window.MAVORY_RELEASE = {
-  version: "9.3.0",
+  version: "9.7.4",
   date: "",
   notes: [],
   downloads: [
-    { id: "windows",   name: "Windows",         kind: "โปรแกรมสำหรับคอมพิวเตอร์", desc: "เลือกแบบติดตั้ง (แนะนำ) หรือแบบพกพาไม่ต้องติดตั้ง", ver: "v9.1.0",
-      url: "https://drive.google.com/file/d/1Euc3Ee4ganMRRS48lbDvDA2tlT2zs45K/view", label: "ดาวน์โหลดแบบติดตั้ง (แนะนำ)",
-      alt: { url: "https://drive.google.com/file/d/1HcvY4XnNWlpBiJmN3yTB1450IDSO9jRA/view", label: "ดาวน์โหลดแบบพกพา (Portable)" }, manual: "" },
-    { id: "macos",     name: "macOS",           kind: "โปรแกรมสำหรับ Mac", desc: "ติดตั้งบนเครื่อง Mac (MacBook, iMac, Mac mini) — ไฟล์ .zip แตกไฟล์แล้วลากแอปไปไว้ที่ Applications", ver: "v9.1.0",
-      url: "https://drive.google.com/file/d/1ggEv2jTTehPyrVQKOlfYyp6URzeSVpll/view", label: "ดาวน์โหลด Mac ชิป M1 ขึ้นไป",
-      alt: { url: "https://drive.google.com/file/d/1oxEoqZlbyaNXSCVvNPxG7n37GnGCXtjV/view", label: "ดาวน์โหลด Mac ชิป Intel" }, manual: "" },
-    { id: "android",   name: "Android",         kind: "แอปสำหรับมือถือ", desc: "ติดตั้งบนมือถือและแท็บเล็ต Android", ver: "v9.3.0",
-      url: "https://drive.google.com/file/d/1skEjOeR-UiFFsku7W44qIKiNU6jQKdhN/view", manual: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
-    { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v9.3.0",
-      url: "https://drive.google.com/file/d/1Yvgkw7Mq_7uNaqTDkW8Fuoiq4GHzU6_d/view", manual: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" }
+    { id: "windows",   name: "Windows",         kind: "โปรแกรมสำหรับคอมพิวเตอร์", desc: "เลือกแบบติดตั้ง (แนะนำ) หรือแบบพกพาไม่ต้องติดตั้ง", ver: "v9.7.4",
+      url: "https://drive.google.com/file/d/1p83QpNgvM2Y9TOmyDRZXaq2CdOnUxrzY/view", label: "ดาวน์โหลดแบบติดตั้ง (แนะนำ)",
+      alt: { url: "https://drive.google.com/file/d/1Z-NF2kqRutXV0L-eNeiasVCBbYoZ2F-n/view", label: "ดาวน์โหลดแบบพกพา (Portable)" }, manual: "" },
+    { id: "macos",     name: "macOS",           kind: "โปรแกรมสำหรับ Mac", desc: "ติดตั้งบนเครื่อง Mac (MacBook, iMac, Mac mini) — ไฟล์ .zip แตกไฟล์แล้วลากแอปไปไว้ที่ Applications", ver: "v9.7.4",
+      url: "https://drive.google.com/file/d/1NSn7cE-QPJBEKiFIWOdvOqwV6UCNyVhC/view", label: "ดาวน์โหลด Mac ชิป M1 ขึ้นไป",
+      alt: { url: "https://drive.google.com/file/d/12F6RP9HtUcsjcXDGqXlIJHOezNoHHkXl/view", label: "ดาวน์โหลด Mac ชิป Intel" }, manual: "" },
+    { id: "android",   name: "Android",         kind: "แอปสำหรับมือถือ", desc: "ติดตั้งบนมือถือและแท็บเล็ต Android", ver: "v9.7.4",
+      url: "https://drive.google.com/file/d/1SJV9ntuQroPu9LGShaw1-O4s5wC85thd/view", manual: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
+    { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v9.7.4",
+      url: "https://drive.google.com/file/d/1AAjEDy_MXi_fiB9z0Urg3zU51j7gZ9Cu/view", manual: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" }
   ],
   flow: {
     full:  { version: "v1.49", url: "https://flow.google.com/shared/tool/71a9d800-b199-45a9-ad88-782ae144a888" },
