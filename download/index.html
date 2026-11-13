@@ -280,7 +280,7 @@ a.man:hover{background:rgba(0,208,205,.055)}
   </main>
 
 </div>
-<script src="../releases.js"></script>
+<script>document.write('<script src="../releases.js?t='+Date.now()+'"><\/script>')</script>
 <script>
   var RELEASE = window.MAVORY_RELEASE || { version: "", downloads: [], manuals: [] };
   var DOWNLOADS = RELEASE.downloads, MANUALS = RELEASE.manuals;
