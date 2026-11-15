@@ -4,16 +4,16 @@
    label   : ข้อความบนปุ่มหลัก (เว้นได้)   alt : ปุ่มดาวน์โหลดที่สอง { url, label } (เว้นได้)
    manual  : ลิงก์วิดีโอสอนของอุปกรณ์นั้น (ว่างไว้ = ปุ่มขึ้นว่า "ยังไม่มีคู่มือ")            */
 window.MAVORY_RELEASE = {
-  version: "10.1.5",
+  version: "10.1.7",
   date: "",
   notes: [],
   downloads: [
-    { id: "windows",   name: "Windows",         kind: "โปรแกรมสำหรับคอมพิวเตอร์", desc: "เลือกแบบติดตั้ง (แนะนำ) หรือแบบพกพาไม่ต้องติดตั้ง", ver: "v9.7.4",
-      url: "https://drive.google.com/file/d/1p83QpNgvM2Y9TOmyDRZXaq2CdOnUxrzY/view", label: "ดาวน์โหลดแบบติดตั้ง (แนะนำ)",
-      alt: { url: "https://drive.google.com/file/d/1Z-NF2kqRutXV0L-eNeiasVCBbYoZ2F-n/view", label: "ดาวน์โหลดแบบพกพา (Portable)" }, manual: "" },
-    { id: "macos",     name: "macOS",           kind: "โปรแกรมสำหรับ Mac", desc: "ติดตั้งบนเครื่อง Mac (MacBook, iMac, Mac mini) — ไฟล์ .zip แตกไฟล์แล้วลากแอปไปไว้ที่ Applications", ver: "v9.7.4",
-      url: "https://drive.google.com/file/d/1NSn7cE-QPJBEKiFIWOdvOqwV6UCNyVhC/view", label: "ดาวน์โหลด Mac ชิป M1 ขึ้นไป",
-      alt: { url: "https://drive.google.com/file/d/12F6RP9HtUcsjcXDGqXlIJHOezNoHHkXl/view", label: "ดาวน์โหลด Mac ชิป Intel" }, manual: "" },
+    { id: "windows",   name: "Windows",         kind: "โปรแกรมสำหรับคอมพิวเตอร์", desc: "เลือกแบบติดตั้ง (แนะนำ) หรือแบบพกพาไม่ต้องติดตั้ง", ver: "v10.1.7",
+      url: "https://drive.google.com/file/d/1GXlERwl_LRKk4XTw6tpN_0QWKsmYOoIG/view", label: "ดาวน์โหลดแบบติดตั้ง (แนะนำ)",
+      alt: { url: "https://drive.google.com/file/d/14y2SnU_RVfYTTM6MMq5pjc1YGHt_0xng/view", label: "ดาวน์โหลดแบบพกพา (Portable)" }, manual: "" },
+    { id: "macos",     name: "macOS",           kind: "โปรแกรมสำหรับ Mac", desc: "ติดตั้งบนเครื่อง Mac (MacBook, iMac, Mac mini) — ไฟล์ .zip แตกไฟล์แล้วลากแอปไปไว้ที่ Applications", ver: "v10.1.7",
+      url: "https://drive.google.com/file/d/1-CNbqZOoRey8nN-SSpFrVCe1CzxPH1TB/view", label: "ดาวน์โหลด Mac ชิป M1 ขึ้นไป",
+      alt: { url: "https://drive.google.com/file/d/1QVj9FbD0t_q65NZc91ACi6lodY101g8X/view", label: "ดาวน์โหลด Mac ชิป Intel" }, manual: "" },
     { id: "android",   name: "Android",         kind: "แอปสำหรับมือถือ", desc: "ติดตั้งบนมือถือและแท็บเล็ต Android", ver: "v10.1.5",
       url: "https://drive.google.com/file/d/1Okssh3PjAmsa5HxtaAcA_8NuN7zJD76R/view", manual: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
     { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v10.1.5",
