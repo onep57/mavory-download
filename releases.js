@@ -4,7 +4,7 @@
    label   : ข้อความบนปุ่มหลัก (เว้นได้)   alt : ปุ่มดาวน์โหลดที่สอง { url, label } (เว้นได้)
    manual  : ลิงก์วิดีโอสอนของอุปกรณ์นั้น (ว่างไว้ = ปุ่มขึ้นว่า "ยังไม่มีคู่มือ")            */
 window.MAVORY_RELEASE = {
-  version: "9.9.0",
+  version: "10.1.5",
   date: "",
   notes: [],
   downloads: [
@@ -14,10 +14,10 @@ window.MAVORY_RELEASE = {
     { id: "macos",     name: "macOS",           kind: "โปรแกรมสำหรับ Mac", desc: "ติดตั้งบนเครื่อง Mac (MacBook, iMac, Mac mini) — ไฟล์ .zip แตกไฟล์แล้วลากแอปไปไว้ที่ Applications", ver: "v9.7.4",
       url: "https://drive.google.com/file/d/1NSn7cE-QPJBEKiFIWOdvOqwV6UCNyVhC/view", label: "ดาวน์โหลด Mac ชิป M1 ขึ้นไป",
       alt: { url: "https://drive.google.com/file/d/12F6RP9HtUcsjcXDGqXlIJHOezNoHHkXl/view", label: "ดาวน์โหลด Mac ชิป Intel" }, manual: "" },
-    { id: "android",   name: "Android",         kind: "แอปสำหรับมือถือ", desc: "ติดตั้งบนมือถือและแท็บเล็ต Android", ver: "v9.9.0",
-      url: "https://drive.google.com/file/d/1pQswtWTh9hKzPAtHLqLWCCh8mttlamJU/view", manual: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
-    { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v9.9.0",
-      url: "https://drive.google.com/file/d/1SBDj2s52zoL-r7g0OLWAz0jDi7KC5hZM/view", manual: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" }
+    { id: "android",   name: "Android",         kind: "แอปสำหรับมือถือ", desc: "ติดตั้งบนมือถือและแท็บเล็ต Android", ver: "v10.1.5",
+      url: "https://drive.google.com/file/d/1Okssh3PjAmsa5HxtaAcA_8NuN7zJD76R/view", manual: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
+    { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v10.1.5",
+      url: "https://drive.google.com/file/d/1a0VQylla76kt5I7YZAmzefhg37Zdf-qa/view", manual: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" }
   ],
   flow: {
     full:  { version: "v1.51", url: "https://flow.google.com/shared/tool/fae4cc3c-309a-40b6-93d4-f374358d5f56" },
