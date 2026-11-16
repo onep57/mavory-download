@@ -193,7 +193,7 @@ a.man:hover{background:rgba(0,208,205,.055)}
 @media(max-width:700px){.nt-grid{grid-template-columns:1fr}.notice summary{align-items:flex-start}}
 .signup-box{margin:0 0 14px;padding:16px 16px 14px;border-radius:16px;border:1px solid rgba(9,224,208,.45);background:linear-gradient(145deg,rgba(6,34,44,.75),rgba(10,16,34,.9))}
 .signup-box .dl-sub{margin-bottom:12px}
-.su-btn{width:100%;padding:12px 14px;border:0;border-radius:12px;cursor:pointer;font:700 14px var(--font-display);color:#04131a;background:linear-gradient(90deg,#14e3d2,#3aa9f5)}
+.su-btn{display:block;box-sizing:border-box;text-align:center;text-decoration:none;width:100%;padding:12px 14px;border:0;border-radius:12px;cursor:pointer;font:700 14px var(--font-display);color:#04131a;background:linear-gradient(90deg,#14e3d2,#3aa9f5)}
 .su-btn[aria-expanded="true"]{background:rgba(20,227,210,.14);color:#57eee2;border:1px solid rgba(20,227,210,.5)}
 .su-frame-wrap{margin-top:12px}
 .su-frame-wrap iframe{display:block;width:100%;height:760px;border:0;border-radius:14px;background:#02090d}
@@ -269,11 +269,7 @@ a.man:hover{background:rgba(0,208,205,.055)}
           <div><div class="eyebrow">ACCOUNT</div><h3 class="dl-title">สร้างบัญชี MAVORY</h3>
           <p class="dl-sub">สมัครครั้งเดียว ใช้ชื่อผู้ใช้และรหัสผ่านนี้เข้าสู่ระบบในแอป คีย์ที่ผูกกับบัญชีจะตามไปทุกเครื่อง</p></div>
         </div>
-        <button type="button" class="su-btn" id="su-toggle" aria-expanded="false" aria-controls="su-frame-wrap">👤 สร้างบัญชี MAVORY</button>
-        <div class="su-frame-wrap" id="su-frame-wrap" hidden>
-          <iframe id="su-frame" title="สร้างบัญชี MAVORY" loading="lazy"></iframe>
-          <a class="su-open" href="../signup/index.htm" target="_blank" rel="noopener">เปิดหน้าสมัครในหน้าต่างใหม่ ↗</a>
-        </div>
+        <a class="su-btn" href="../signup/index.htm">👤 สร้างบัญชี MAVORY</a>
       </div>
       <div class="dl-box" aria-label="เลือกอุปกรณ์ของคุณ">
         <div class="eyebrow">DOWNLOAD</div>
@@ -359,14 +355,6 @@ a.man:hover{background:rgba(0,208,205,.055)}
     return '<article class="card' + (d.id === mine ? " you" : "") + '"><div class="card-top"><div class="ico">' + ICONS[d.id] + '</div><div><h2>' + esc(d.name) + (d.ver ? ' <span class="v">' + esc(d.ver) + '</span>' : '') + '</h2><p class="kind">' + esc(d.kind) + '</p></div>' + (d.id === mine ? '<span class="tag">ตรงกับเครื่องนี้</span>' : "") + '</div><p class="desc">' + esc(d.desc) + '</p><div class="actions">' + dl + man + '</div></article>';
   }).join("");
   (function(){var F=(window.MAVORY_RELEASE||{}).flow;if(!F)return;[["full","flow-full"],["trial","flow-trial"]].forEach(function(k){var d=F[k[0]],a=document.getElementById(k[1]);if(!d||!a)return;if(d.url)a.href=d.url;var v=document.getElementById(k[1]+"-v");if(v&&d.version)v.textContent=d.version;});})();
-</script>
-<script>
-(function(){var b=document.getElementById('su-toggle'),w=document.getElementById('su-frame-wrap'),f=document.getElementById('su-frame');if(!b)return;
-function fit(){try{var d=f.contentDocument;if(d&&d.body){var h=Math.max(d.body.scrollHeight,d.documentElement.scrollHeight);if(h>200)f.style.height=h+'px';}}catch(e){}}
-f.addEventListener('load',function(){fit();try{var d=f.contentDocument;new MutationObserver(fit).observe(d.body,{subtree:true,childList:true,attributes:true});d.querySelectorAll('a').forEach(function(a){if(!a.target)a.target='_top';});}catch(e){}});
-b.addEventListener('click',function(){var open=w.hidden;w.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');b.textContent=open?'ซ่อนฟอร์มสมัคร':'👤 สร้างบัญชี MAVORY';if(open&&!f.src)f.src='../signup/index.htm';});
-if(location.hash==='#signup'){b.click();}
-})();
 </script>
 </body>
 </html>
