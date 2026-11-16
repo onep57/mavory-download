@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#031015">
+<meta name="referrer" content="no-referrer">
+<title>สมัครใช้งาน MAVORY</title>
+<meta name="description" content="สร้างบัญชี MAVORY เพื่อเข้าสู่ระบบในแอป ใช้คีย์ได้ทุกเครื่อง">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Prompt:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#020b10;--surface:#07151d;--surface2:#0b1d26;--fg:#e9f4f7;--muted:#8fa8b3;--line:#183541;--line2:#25505f;--teal:#09e0d0;--blue:#24a9f3;--bad:#ff7b8f;--ok:#2fe0a8;--font-display:"Prompt","IBM Plex Sans Thai",system-ui,sans-serif;--font-body:"IBM Plex Sans Thai",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 4% 20%,rgba(0,195,172,.14),transparent 32%),radial-gradient(ellipse at 96% 40%,rgba(0,120,190,.12),transparent 30%),linear-gradient(115deg,#020a0d 0%,#031118 48%,#02090e 100%);color:var(--fg);font:15px/1.55 var(--font-body);overflow-x:hidden}
+a{color:var(--teal)}
+.page{width:min(460px,calc(100% - 32px));margin:0 auto;padding:28px 0 40px}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+.wordmark{font:700 16px var(--font-display);letter-spacing:.22em;color:#eaf7f8;text-decoration:none}
+.wordmark span{color:var(--teal)}
+.top a.back{color:var(--muted);font-size:13px;text-decoration:none}
+.top a.back:hover{color:var(--fg)}
+h1{font:700 clamp(26px,6vw,32px)/1.2 var(--font-display);margin:0 0 6px;letter-spacing:-.01em}
+h1 .gradient{background:linear-gradient(90deg,#04e5d1 5%,#3fa9f4 55%,#9b56ea 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#a0b8c2;margin:0 0 20px;font-size:14px}
+.card{border:1px solid rgba(29,199,227,.45);border-radius:18px;padding:22px 20px 20px;background:linear-gradient(145deg,rgba(6,22,30,.97),rgba(5,18,27,.94));box-shadow:0 0 26px rgba(0,180,215,.10)}
+.field{margin-bottom:15px}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.inp{position:relative}
+input{width:100%;height:48px;border-radius:12px;border:1px solid var(--line2);background:#04121a;color:var(--fg);font:15px var(--font-body);padding:0 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(9,224,208,.18)}
+input[aria-invalid=true]{border-color:var(--bad)}
+.inp input.pw{padding-right:48px}
+.eye{position:absolute;right:6px;top:6px;width:36px;height:36px;border:0;border-radius:9px;background:transparent;color:var(--muted);cursor:pointer;display:grid;place-items:center}
+.eye:hover,.eye:focus-visible{color:var(--fg);background:rgba(255,255,255,.05);outline:none}
+.hint{color:var(--muted);font-size:12.5px;margin-top:5px}
+.ferr{color:var(--bad);font-size:12.5px;margin-top:5px;min-height:0}
+.ferr:empty{display:none}
+.alert{border-radius:12px;padding:11px 13px;font-size:14px;margin:4px 0 14px;border:1px solid rgba(255,123,143,.45);background:rgba(255,80,110,.08);color:#ffc4cd}
+.alert[hidden]{display:none}
+.btn{width:100%;height:50px;border:0;border-radius:13px;font:600 16px var(--font-display);color:#02161a;background:linear-gradient(90deg,#09e0d0,#3fa9f4);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;margin-top:6px}
+.btn:hover{filter:brightness(1.07)}
+.btn:focus-visible{outline:3px solid rgba(9,224,208,.45);outline-offset:2px}
+.btn[disabled]{opacity:.6;cursor:progress}
+.spin{width:16px;height:16px;border-radius:50%;border:2px solid rgba(2,22,26,.35);border-top-color:#02161a;animation:sp .8s linear infinite;display:none}
+.btn[disabled] .spin{display:block}
+@keyframes sp{to{transform:rotate(360deg)}}
+.small{color:var(--muted);font-size:13px;text-align:center;margin-top:14px}
+.small a{text-decoration:none;font-weight:600}
+.done[hidden],.form[hidden]{display:none}
+.done h2{font:700 22px var(--font-display);margin:0 0 4px;color:var(--ok)}
+.done .who{color:var(--muted);margin:0 0 16px;font-size:14px}
+.done .who b{color:var(--fg);font-family:var(--mono);font-weight:500}
+.steps{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:10px}
+.steps li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;padding:12px;border:1px solid var(--line);border-radius:13px;background:rgba(4,18,26,.7)}
+.steps .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:600 14px var(--font-display);color:#02161a;background:var(--teal)}
+.steps b{display:block;font-size:14.5px}
+.steps span{color:var(--muted);font-size:13px}
+.steps a.go{display:inline-block;margin-top:7px;font-weight:600;text-decoration:none;border:1px solid rgba(9,224,208,.55);border-radius:10px;padding:6px 12px;font-size:13px}
+.foot{color:var(--muted);font-size:12.5px;text-align:center;margin-top:20px}
+.foot a{text-decoration:none}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <a class="wordmark" href="../" aria-label="MAVORY หน้าแรก">MAV<span>O</span>RY</a>
+    <a class="back" href="../download/">ดาวน์โหลดแอป →</a>
+  </div>
+
+  <h1>สร้างบัญชี <span class="gradient">MAVORY</span></h1>
+  <p class="lead">สมัครครั้งเดียว ใช้ชื่อผู้ใช้กับรหัสผ่านนี้เข้าสู่ระบบในแอป คีย์ที่ผูกกับบัญชีจะตามไปทุกเครื่อง</p>
+
+  <div class="card">
+    <form class="form" id="f" novalidate autocomplete="on">
+      <div class="alert" id="alert" role="alert" hidden></div>
+
+      <div class="field">
+        <label for="u">ชื่อผู้ใช้ (username)</label>
+        <input id="u" name="username" type="text" inputmode="text" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="24" placeholder="เช่น somchai_88" aria-describedby="u-h u-e" required>
+        <div class="hint" id="u-h">ภาษาอังกฤษตัวเล็ก ตัวเลข _ หรือ . ยาว 3-24 ตัว</div>
+        <div class="ferr" id="u-e"></div>
+      </div>
+
+      <div class="field">
+        <label for="e">อีเมล</label>
+        <input id="e" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" maxlength="200" placeholder="name@gmail.com" aria-describedby="e-h e-e" required>
+        <div class="hint" id="e-h">ใช้รับรหัสเมื่อลืมรหัสผ่าน และยืนยันการทดลองใช้ฟรี</div>
+        <div class="ferr" id="e-e"></div>
+      </div>
+
+      <div class="field">
+        <label for="p">รหัสผ่าน</label>
+        <div class="inp">
+          <input id="p" class="pw" name="password" type="password" autocomplete="new-password" maxlength="200" aria-describedby="p-h p-e" required>
+          <button type="button" class="eye" data-for="p" aria-label="แสดงรหัสผ่าน" aria-pressed="false"></button>
+        </div>
+        <div class="hint" id="p-h">อย่างน้อย 6 ตัว</div>
+        <div class="ferr" id="p-e"></div>
+      </div>
+
+      <div class="field">
+        <label for="p2">ยืนยันรหัสผ่าน</label>
+        <div class="inp">
+          <input id="p2" class="pw" name="password2" type="password" autocomplete="new-password" maxlength="200" aria-describedby="p2-e" required>
+          <button type="button" class="eye" data-for="p2" aria-label="แสดงรหัสผ่าน" aria-pressed="false"></button>
+        </div>
+        <div class="ferr" id="p2-e"></div>
+      </div>
+
+      <button class="btn" id="go" type="submit"><span class="spin" aria-hidden="true"></span><span id="go-t">สร้างบัญชี</span></button>
+      <p class="small">มีบัญชีแล้ว? เปิดแอป MAVORY แล้วกด <b>เข้าสู่ระบบ</b></p>
+    </form>
+
+    <div class="done" id="done" hidden tabindex="-1">
+      <h2>สร้างบัญชีเรียบร้อย ✓</h2>
+      <p class="who">ชื่อผู้ใช้ของคุณ: <b id="who"></b></p>
+      <ol class="steps">
+        <li><span class="n">1</span><div><b>ดาวน์โหลดและติดตั้งแอป</b><span>เลือกตามอุปกรณ์ Windows, Mac, Android หรือส่วนขยาย Chrome</span><br><a class="go" href="../download/">ไปหน้าดาวน์โหลด</a></div></li>
+        <li><span class="n">2</span><div><b>เข้าสู่ระบบในแอป</b><span>เปิดแอป กด "เข้าสู่ระบบ" แล้วใส่ชื่อผู้ใช้กับรหัสผ่านที่เพิ่งตั้ง</span></div></li>
+        <li><span class="n">3</span><div><b>เปิดใช้งาน</b><span>ถ้าเปิดทดลองใช้ฟรีอยู่ แอปจะให้ยืนยันอีเมลด้วยรหัส 6 หลัก · หรือติดต่อซื้อคีย์ แล้วคีย์จะผูกกับบัญชีนี้</span><br><a class="go" href="https://m.me/MavoryAi" target="_blank" rel="noopener">ติดต่อซื้อคีย์ทาง Messenger</a></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <p class="foot">มีปัญหาการสมัคร? ติดต่อ <a href="https://www.facebook.com/MavoryAi/" target="_blank" rel="noopener">MAVORY บน Facebook</a></p>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  // เซิร์ฟเวอร์บัญชีตัวเดียวกับในแอป (Apps Script) · ส่งแบบเดียวกับแอป: POST ข้อความ JSON
+  var SERVER = 'https://script.google.com/macros/s/AKfycbx7qgsdMs3--OrpF4zRHLF2nkFpoN1G6LWn8xKVQKSqJvpMymRg5NXKb4NfDZ_g1rJWMQ/exec';
+  var PROTO = 1;
+  var MSG = {
+    bad_user: 'ชื่อผู้ใช้ต้องเป็นภาษาอังกฤษตัวเล็ก ตัวเลข _ หรือ . ยาว 3-24 ตัว',
+    bad_email: 'อีเมลไม่ถูกต้อง',
+    bad_pass: 'รหัสผ่านต้องยาวอย่างน้อย 6 ตัว',
+    pass_mismatch: 'รหัสผ่านทั้งสองช่องไม่ตรงกัน',
+    user_taken: 'ชื่อผู้ใช้นี้มีคนใช้แล้ว ลองชื่ออื่น',
+    email_taken: 'อีเมลนี้สมัครไว้แล้ว เข้าสู่ระบบในแอป หรือกด "ลืมรหัสผ่าน" ในแอป',
+    mail_fail: 'ระบบส่งอีเมลขัดข้องชั่วคราว ลองใหม่ภายหลัง หรือติดต่อผู้ขาย',
+    busy: 'เซิร์ฟเวอร์กำลังยุ่ง ลองใหม่อีกครั้งในสักครู่',
+    net: 'เชื่อมต่อเซิร์ฟเวอร์ไม่ได้ ตรวจอินเทอร์เน็ตแล้วลองใหม่',
+    server: 'เซิร์ฟเวอร์ตอบกลับผิดปกติ ลองใหม่อีกครั้ง หรือติดต่อผู้ขาย'
+  };
+  // ข้อผิดพลาดที่ชี้ไปที่ช่องไหน
+  var FIELD = { bad_user: 'u', user_taken: 'u', bad_email: 'e', email_taken: 'e', bad_pass: 'p', pass_mismatch: 'p2' };
+  var $ = function (id) { return document.getElementById(id); };
+  var f = $('f'), go = $('go'), alertEl = $('alert');
+
+  // ปุ่มแสดง/ซ่อนรหัสผ่าน
+  var EYE = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+  var EYE_OFF = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.2 4.1M6.6 6.6C3.8 8.4 2 12 2 12s3.6 7 10 7c1.6 0 3-.4 4.3-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>';
+  Array.prototype.forEach.call(document.querySelectorAll('.eye'), function (b) {
+    b.innerHTML = EYE;
+    b.addEventListener('click', function () {
+      var inp = $(b.getAttribute('data-for')); var show = inp.type === 'password';
+      inp.type = show ? 'text' : 'password';
+      b.innerHTML = show ? EYE_OFF : EYE;
+      b.setAttribute('aria-pressed', show ? 'true' : 'false');
+      b.setAttribute('aria-label', show ? 'ซ่อนรหัสผ่าน' : 'แสดงรหัสผ่าน');
+    });
+  });
+
+  // ชื่อผู้ใช้: ตัวเล็กอัตโนมัติ ตัดช่องว่าง
+  $('u').addEventListener('input', function () { var v = this.value.toLowerCase().replace(/\s+/g, ''); if (v !== this.value) this.value = v; });
+
+  function fieldErr(id, msg) {
+    var inp = $(id), box = $(id + '-e');
+    if (box) box.textContent = msg || '';
+    if (inp) inp.setAttribute('aria-invalid', msg ? 'true' : 'false');
+  }
+  function clearErrs() { ['u', 'e', 'p', 'p2'].forEach(function (id) { fieldErr(id, ''); }); alertEl.hidden = true; alertEl.textContent = ''; }
+  function showAlert(msg) { alertEl.textContent = msg; alertEl.hidden = false; }
+  ['u', 'e', 'p', 'p2'].forEach(function (id) { $(id).addEventListener('input', function () { fieldErr(id, ''); }); });
+
+  function validate(u, e, p, p2) {
+    var errs = {};
+    if (!/^[a-z0-9_.]{3,24}$/.test(u)) errs.u = MSG.bad_user;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e) || e.length > 200) errs.e = MSG.bad_email;
+    if (p.length < 6) errs.p = MSG.bad_pass;
+    if (p !== p2) errs.p2 = MSG.pass_mismatch;
+    return errs;
+  }
+
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  async function call(body) {
+    for (var i = 0; i < 3; i++) {
+      var ctl = new AbortController(); var to = setTimeout(function () { ctl.abort(); }, 30000);
+      var text;
+      try {
+        var r = await fetch(SERVER, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'text/plain;charset=utf-8' }, credentials: 'omit', cache: 'no-store', redirect: 'follow', signal: ctl.signal });
+        text = await r.text();
+      } catch (x) { clearTimeout(to); return { ok: false, err: 'net' }; }
+      clearTimeout(to);
+      var j; try { j = JSON.parse(text); } catch (x) { return { ok: false, err: 'server' }; }
+      if (!j || typeof j !== 'object' || j.p !== PROTO) return { ok: false, err: 'server' };
+      if (j.err === 'busy' && i < 2) { await sleep(1200 * (i + 1)); continue; }
+      return j;
+    }
+    return { ok: false, err: 'busy' };
+  }
+
+  var sending = false;
+  f.addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+    if (sending) return;
+    clearErrs();
+    var u = $('u').value.trim().toLowerCase(), e = $('e').value.trim(), p = $('p').value, p2 = $('p2').value;
+    var errs = validate(u, e, p, p2), first = null;
+    Object.keys(errs).forEach(function (id) { fieldErr(id, errs[id]); if (!first) first = id; });
+    if (first) { $(first).focus(); return; }
+    sending = true; go.disabled = true; $('go-t').textContent = 'กำลังสร้างบัญชี...';
+    var res = await call({ a: 'acct_signup', u: u, e: e, p: p });
+    sending = false; go.disabled = false; $('go-t').textContent = 'สร้างบัญชี';
+    if (res && res.ok) {
+      // ไม่เก็บรหัสผ่านหรือข้อมูลเข้าสู่ระบบไว้ในหน้าเว็บ · ล้างช่องรหัสผ่านทันที
+      $('p').value = ''; $('p2').value = '';
+      $('who').textContent = res.u || u;
+      f.hidden = true; $('done').hidden = false; $('done').focus();
+      try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (x) { window.scrollTo(0, 0); }
+      return;
+    }
+    var code = (res && res.err) || 'server';
+    var msg = MSG[code] || MSG.server;
+    if (FIELD[code]) { fieldErr(FIELD[code], msg); $(FIELD[code]).focus(); }
+    else showAlert(msg);
+  });
+})();
+</script>
+</body>
+</html>
