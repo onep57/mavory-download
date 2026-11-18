@@ -4,7 +4,7 @@
    label   : ข้อความบนปุ่มหลัก (เว้นได้)   alt : ปุ่มดาวน์โหลดที่สอง { url, label } (เว้นได้)
    manual  : ลิงก์วิดีโอสอนของอุปกรณ์นั้น (ว่างไว้ = ปุ่มขึ้นว่า "ยังไม่มีคู่มือ")            */
 window.MAVORY_RELEASE = {
-  version: "10.1.7",
+  version: "10.6.6",
   date: "",
   notes: [],
   downloads: [
@@ -14,14 +14,14 @@ window.MAVORY_RELEASE = {
     { id: "macos",     name: "macOS",           kind: "โปรแกรมสำหรับ Mac", desc: "ติดตั้งบนเครื่อง Mac (MacBook, iMac, Mac mini) — ไฟล์ .zip แตกไฟล์แล้วลากแอปไปไว้ที่ Applications", ver: "v10.1.7",
       url: "https://drive.google.com/file/d/1-CNbqZOoRey8nN-SSpFrVCe1CzxPH1TB/view", label: "ดาวน์โหลด Mac ชิป M1 ขึ้นไป",
       alt: { url: "https://drive.google.com/file/d/1QVj9FbD0t_q65NZc91ACi6lodY101g8X/view", label: "ดาวน์โหลด Mac ชิป Intel" }, manual: "" },
-    { id: "android",   name: "Android",         kind: "แอปสำหรับมือถือ", desc: "ติดตั้งบนมือถือและแท็บเล็ต Android", ver: "v10.1.5",
-      url: "https://drive.google.com/file/d/1Okssh3PjAmsa5HxtaAcA_8NuN7zJD76R/view", manual: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
-    { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v10.1.5",
-      url: "https://drive.google.com/file/d/1a0VQylla76kt5I7YZAmzefhg37Zdf-qa/view", manual: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" }
+    { id: "android",   name: "Android",         kind: "แอปสำหรับมือถือ", desc: "ติดตั้งบนมือถือและแท็บเล็ต Android", ver: "v10.6.6",
+      url: "https://drive.google.com/file/d/1VvmTvssvCOEJnQpA-inZgPi51wEueOWy/view", manual: "https://www.youtube.com/watch?v=zel6ZeDYyNI" },
+    { id: "extension", name: "ส่วนขยาย Chrome", kind: "Extension สำหรับ Google Chrome", desc: "ใช้งานผ่านเบราว์เซอร์ Google Chrome บนคอมพิวเตอร์", ver: "v10.6.6",
+      url: "https://drive.google.com/file/d/1RLu50swHKMAOxvBofsduz16aV2KlSTm3/view", manual: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" }
   ],
   flow: {
-    full:  { version: "v1.52", url: "https://flow.google.com/shared/tool/71e7c7aa-8388-4f27-949b-815f0a0e7a4d" },
-    trial: { version: "รุ่น t5.0", url: "https://flow.google.com/shared/tool/d1975256-2ef7-42c1-9ef2-91967f77e2d9" }
+    full:  { version: "v1.55", url: "https://flow.google.com/shared/tool/714984e5-7481-4e37-ac11-3daab28b10d6" },
+    trial: { version: "รุ่น t5.3", url: "https://flow.google.com/shared/tool/248c45a3-a744-4438-96ea-43819968248b" }
   },
   manuals: [
     { title: "ติดตั้งส่วนขยาย MAVORY บน Chrome (Windows)", note: "วิดีโอสอนติดตั้งและเริ่มใช้งานส่วนขยายบนคอมพิวเตอร์", url: "https://www.youtube.com/watch?v=q_pI_QFB3Mo" },
